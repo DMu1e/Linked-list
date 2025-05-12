@@ -26,13 +26,13 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def insert_at_index(self, index, data):  # Fixed parameter order
+    def insert_at_index(self, index, data):  
         if index < 0:
             print("Index must be a positive number")
             return
 
         if index == 0:
-            self.insert_at_start(data)  # Fixed method call
+            self.insert_at_start(data)  
             return
 
         new_node = Node(data)
@@ -85,11 +85,11 @@ class LinkedList:
 
         while current:
             if current.data == key:
-                return position  # Return index if found
+                return position  
             current = current.next
             position += 1
 
-        return -1  # Return -1 if not found
+        return -1 
 
     def display(self):
         elements = []
